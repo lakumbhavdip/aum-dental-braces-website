@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    @apply text-gray-700 bg-white font-sans antialiased;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-600 !important;
+}
