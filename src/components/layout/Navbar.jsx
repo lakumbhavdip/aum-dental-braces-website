@@ -97,11 +97,11 @@ const Navbar = () => {
                         ))}
                     </div>
                     <div className="flex items-center gap-4 pl-4 border-l border-gray-200/20">
-                        <a href="tel:+1234567890" className={cn("flex items-center gap-2 text-sm font-bold tracking-wide group", scrolled ? "text-gray-700" : "text-white")}>
+                        <a href="tel:+916363125050" className={cn("flex items-center gap-2 text-sm font-bold tracking-wide group", scrolled ? "text-gray-700" : "text-white")}>
                             <div className="w-8 h-8 rounded-full bg-primary-100/10 flex items-center justify-center group-hover:bg-primary-500 group-hover:text-white transition-all">
                                 <Phone size={16} />
                             </div>
-                            <span>(+91) 83203 12500</span>
+                            <span>(+91) 63631 25050</span>
                         </a>
                         <Button variant={scrolled ? "primary" : "accent"} size="md" className="gap-2 shadow-xl shadow-accent-gold/20" onClick={() => document.getElementById('contact').scrollIntoView()}>
                             <Calendar size={18} />
@@ -140,11 +140,11 @@ const Navbar = () => {
                                 </a>
                             ))}
                             <div className="h-px bg-gray-100 my-2" />
-                            <a href="tel:+1234567890" className="flex items-center gap-3 text-lg font-medium text-gray-800 py-3 px-4">
+                            <a href="tel:+916363125050" className="flex items-center gap-3 text-lg font-medium text-gray-800 py-3 px-4">
                                 <div className="w-10 h-10 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center">
                                     <Phone size={20} />
                                 </div>
-                                (+91) 83203 12500
+                                (+91) 63631 25050
                             </a>
                             <div className="pt-2">
                                 <Button className="w-full justify-center gap-2" onClick={(e) => handleScroll(e, '#contact')}>

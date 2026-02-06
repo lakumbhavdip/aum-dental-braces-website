@@ -67,6 +67,20 @@ const Contact = () => {
                                 <input required name="user_email" type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="john@example.com" />
                             </div>
                             <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">Mobile Number</label>
+                                <input
+                                    required
+                                    name="user_mobile"
+                                    type="tel"
+                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all"
+                                    placeholder="98765 43210"
+                                    pattern="[0-9]{10}"
+                                    maxLength="10"
+                                    title="Please enter a valid 10-digit mobile number"
+                                    onInput={(e) => e.target.value = e.target.value.replace(/[^0-9]/g, '')}
+                                />
+                            </div>
+                            <div className="space-y-2">
                                 <label className="text-sm font-medium text-gray-700">Service Interest</label>
                                 <select name="service_interest" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-white text-gray-600">
                                     <option>General Dentistry</option>
@@ -133,6 +147,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-white">Phone</p>
+                                        <p className="text-primary-100">(+91) 63631 25050</p>
                                         <p className="text-primary-100">(+91) 83203 12500</p>
                                     </div>
                                 </div>
@@ -153,7 +168,10 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-white">Working Hours</p>
-                                        <p className="text-primary-100">Mon - Fri: 8:00 AM - 7:00 PM<br />Sat: 9:00 AM - 4:00 PM</p>
+                                        <div className="text-primary-100 space-y-1">
+                                            <p className="font-medium">Monday to Saturday</p>
+                                            <p>9:30 AM to 1.00 PM | 5.00 PM to 8.00 PM</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
