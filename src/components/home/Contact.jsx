@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
-import { Mail, MapPin, Phone, Clock, Loader2, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock, Loader2, CheckCircle, MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -37,6 +37,40 @@ const Contact = () => {
                 setStatus('error');
                 console.error(error.text);
             });
+    };
+
+    // Valid for direct booking via WhatsApp
+    const handleWhatsApp = (e) => {
+        e.preventDefault();
+
+        // Manual validation since we are not using standard form submit
+        const formData = form.current;
+        if (!formData.checkValidity()) {
+            formData.reportValidity();
+            return;
+        }
+
+        const firstName = formData.first_name.value;
+        const lastName = formData.last_name.value;
+        const phone = formData.user_mobile.value;
+        const email = formData.user_email.value;
+        const service = formData.service_interest.value;
+        const message = formData.message.value;
+
+        // Construct the message
+        const whatsappMessage = `*New Appointment Request*
+        
+*Name:* ${firstName} ${lastName}
+*Phone:* ${phone}
+*Email:* ${email}
+*Service Interest:* ${service}
+*Description:* ${message} available at your clinic?
+
+Please confirm if this slot is available.`;
+
+        // Encode and open WhatsApp
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        window.open(`https://wa.me/918460562418?text=${encodedMessage}`, '_blank');
     };
 
     return (
@@ -95,15 +129,26 @@ const Contact = () => {
                                 <textarea required name="message" rows="4" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all resize-none" placeholder="How can we help you?"></textarea>
                             </div>
 
-                            <Button className="w-full justify-center gap-2" size="lg" disabled={loading}>
-                                {loading ? (
-                                    <>
-                                        <Loader2 className="animate-spin" /> Sending...
-                                    </>
-                                ) : (
-                                    'Send Message'
-                                )}
-                            </Button>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <Button className="w-full justify-center gap-2" size="lg" disabled={loading}>
+                                    {loading ? (
+                                        <>
+                                            <Loader2 className="animate-spin" /> Sending...
+                                        </>
+                                    ) : (
+                                        'Book via Email'
+                                    )}
+                                </Button>
+
+                                <button
+                                    type="button"
+                                    onClick={handleWhatsApp}
+                                    className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-white transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl bg-[#25D366] hover:bg-[#20bd5a]"
+                                >
+                                    <MessageCircle size={20} />
+                                    Book on WhatsApp
+                                </button>
+                            </div>
 
                             {/* Success Message */}
                             {status === 'success' && (
