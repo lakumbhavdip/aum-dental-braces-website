@@ -215,7 +215,8 @@ Please confirm if this slot is available.`;
                                         <p className="font-semibold text-white">Working Hours</p>
                                         <div className="text-primary-100 space-y-1">
                                             <p className="font-medium">Monday to Saturday</p>
-                                            <p>9:30 AM to 1.00 PM | 5.00 PM to 8.00 PM</p>
+                                            <p className="pl-5"><span className="font-medium">Morning:</span> 10:00 AM to 1:00 PM</p>
+                                            <p className="pl-5"><span className="font-medium">Evening:</span> 5:00 PM to 8:00 PM</p>
                                         </div>
                                     </div>
                                 </div>

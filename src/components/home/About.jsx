@@ -40,7 +40,7 @@ const About = () => {
                         >
                             <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-100">
                                 <div className="w-12 h-12 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold">
-                                    <span className="font-bold text-xl">15+</span>
+                                    <span className="font-bold text-xl">8+</span>
                                 </div>
                                 <div>
                                     <p className="font-bold text-gray-900 leading-tight">Years<br />Experience</p>
@@ -48,7 +48,7 @@ const About = () => {
                             </div>
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
-                                    <span className="font-bold text-xl">5k+</span>
+                                    <span className="font-bold text-xl">250+</span>
                                 </div>
                                 <div>
                                     <p className="font-bold text-gray-900 leading-tight">Happy<br />Patients</p>
@@ -72,7 +72,7 @@ const About = () => {
                             className="mb-8"
                         />
                         <p className="text-gray-500 text-lg leading-relaxed mb-6">
-                            Founded in 2010, AumDentalBraces has been at the forefront of dental excellence. We believe in a holistic approach to dentistry, considering not just your teeth, but your overall well-being.
+                            Founded in 2019, AumDentalBraces has been at the forefront of dental excellence. We believe in a holistic approach to dentistry, considering not just your teeth, but your overall well-being.
                         </p>
                         <p className="text-gray-500 text-lg leading-relaxed mb-8">
                             Our clinic is designed to provide a calm, stress-free environment where you can feel at ease. Utilizing the latest technology from 3D imaging to laser dentistry, we ensure precise diagnoses and effective, painless treatments.
