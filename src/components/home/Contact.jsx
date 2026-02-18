@@ -203,7 +203,7 @@ Please confirm if this slot is available.`;
                                     </div>
                                     <div>
                                         <p className="font-semibold text-white">Email</p>
-                                        <p className="text-primary-100">contact@aumdentalbraces.com</p>
+                                        <p className="text-primary-100">drnirajvaghela@gmail.com</p>
                                     </div>
                                 </div>
 

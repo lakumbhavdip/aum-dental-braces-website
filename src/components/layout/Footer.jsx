@@ -11,9 +11,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="space-y-6">
                         <Link to="/" className="flex items-center gap-2 group">
-                            <div className="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold text-xl">
-                                D
-                            </div>
+                            <img src="/images/Logo/LOGO-removebg.png" alt="AumDentalBraces Logo" className="w-12 h-12 object-contain" />
                             <div className="flex flex-col">
                                 <span className="text-xl font-bold leading-none">AumDental<span className="text-primary-500">Braces</span></span>
                                 <span className="text-xs tracking-wider uppercase text-gray-400">Specialist Clinic</span>

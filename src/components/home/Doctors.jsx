@@ -5,28 +5,39 @@ import { Linkedin, Twitter, Facebook, Award } from 'lucide-react';
 
 const doctors = [
     {
-        name: 'Dr. Sarah Johnson',
+        name: 'Dr. Niraj Vaghela',
         role: 'Chief Dentist & Surgeon',
-        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop',
-        experience: '15 Years',
-        specialty: 'Implantology',
-        awards: ['Best Surgeon 2023', 'Top Dentist']
+        education: 'M.D.S (Orthodontics)- AIIMS',
+        image: '/images/doctors/Dr Niraj Vaghela.png',
+        experience: '10 Years',
+        specialty: 'Braces and Aligner Specialist',
+        awards: ['Former Senior Resident AIIMS']
     },
     {
-        name: 'Dr. Michael Chen',
+        name: 'Dr. Priyawati Vaghela',
         role: 'Orthodontist',
-        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop',
-        experience: '12 Years',
+        education: 'MDS (Orthodontics)- KGMU',
+        image: '/images/doctors/default-female.jpg',
+        experience: '7 Years',
         specialty: 'Orthodontics',
-        awards: ['Invisalign Diamond Provider']
+        awards: []
     },
     {
-        name: 'Dr. Emily Williams',
-        role: 'Pediatric Specialist',
-        image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop',
-        experience: '8 Years',
-        specialty: 'Pediatric Dentistry',
-        awards: ['Kids Choice Award']
+        name: 'Dr. Astha Jani',
+        role: 'Maxillofacial & Facial Cosmetic Surgeon',
+        education: 'MDS OMFS',
+        image: '/images/doctors/Dr. Astha Jani.png', // Assuming user uploaded this exact filename
+        experience: '7 Years', // Using this field for one fellowship
+        specialty: 'Fellowship in Facial plastic surgery & Hair Transplantation', // Using this for the other fellowship
+        awards: []
+    },
+    {
+        name: 'Dr. David Miller',
+        role: 'Cosmetic Dentist',
+        image: '/images/doctors/default-male.jpg',
+        experience: '10 Years',
+        specialty: 'Aesthetic Dentistry',
+        awards: ['Smile Design Expert']
     }
 ];
 
@@ -40,7 +51,7 @@ const Doctors = () => {
                     description="Highly qualified professionals dedicated to delivering the best dental care."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {doctors.map((doctor, index) => (
                         <motion.div
                             key={index}
@@ -56,7 +67,7 @@ const Doctors = () => {
                                 <img
                                     src={doctor.image}
                                     alt={doctor.name}
-                                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full object-contain bg-gray-100 transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                                     <div className="flex gap-4">
@@ -69,6 +80,7 @@ const Doctors = () => {
 
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold text-gray-900 mb-1">{doctor.name}</h3>
+                                <p className="text-sm font-semibold text-gray-700 mb-1">{doctor.education}</p>
                                 <p className="text-primary-600 font-medium mb-4">{doctor.role}</p>
 
                                 <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-4">

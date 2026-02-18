@@ -60,10 +60,12 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-2 group">
-                    <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">
-                        D
-                    </div>
+                <Link
+                    to="/"
+                    className="flex items-center gap-2 group"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                    <img src="/images/Logo/LOGO-removebg.png" alt="AumDentalBraces Logo" className="w-14 h-14 object-contain" />
                     <div className="flex flex-col">
                         <span className={cn("text-xl font-bold leading-none tracking-tight",
                             scrolled ? "text-gray-900" : "text-gray-900 md:text-white"
